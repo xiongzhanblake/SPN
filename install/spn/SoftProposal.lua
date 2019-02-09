@@ -1,5 +1,8 @@
 local SoftProposal, parent = torch.class('nn.SoftProposal', 'nn.Module')
 
+# maxIteration: iterations of optimizing fully connected directed graph.
+# tolerence:
+# factor: the variance used in exponential function of spatial distance.
 function SoftProposal:__init(factor, tolerance, maxIteration)
     parent.__init(self)
     self.output = torch.Tensor()
